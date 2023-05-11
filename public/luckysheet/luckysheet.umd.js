@@ -78370,6 +78370,14 @@
 			}
 			pd.saveParam("mv", ga.currentSheetIndex, ga.luckysheet_select_save)
 		})).dblclick((function(e) {
+			// wpp添加
+			let rangeValue = fm.getRangeValue()[0][0];
+			if(rangeValue != null){
+				if(rangeValue.expand=='readOnly'){
+					return
+				}
+			}
+			// wpp添加结束
 			if (!$(e.target).hasClass("luckysheet-mousedown-cancel") && ga.allowEdit && !(parseInt($("#luckysheet-input-box").css("top")) > 0)) {
 				var t = $s(e.pageX, e.pageY);
 				if (!(t[0] >= ga.cellmainWidth - ga.cellMainSrollBarSize || t[1] >= ga.cellmainHeight - ga.cellMainSrollBarSize)) {
@@ -80871,6 +80879,14 @@
 		$("#luckysheet-input-box").click((function() {
 			Ih.rangeHightlightselected($("#luckysheet-rich-text-editor"))
 		})).add("#" + ga.container).on("keydown", (function(t) {
+			// wpp添加
+			let rangeValue = fm.getRangeValue()[0][0];
+			if(rangeValue != null){
+				if(rangeValue.expand=='readOnly'){
+					return
+				}
+			}
+			// wpp添加结束
 			var a = t.ctrlKey,
 				r = t.altKey,
 				n = t.shiftKey,

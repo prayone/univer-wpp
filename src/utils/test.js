@@ -11,6 +11,7 @@ let data1 = [
         v: {
           v: "\u5317\u4eac\u9500\u552e",
           id: 65790,
+          expand:'readOnly'
         },
       },
       {
@@ -19,6 +20,7 @@ let data1 = [
         v: {
           v: "\u725b\u4e4b\u7ae5",
           id: 65790,
+          expand:'readOnly'
         },
       },
       {
@@ -27,6 +29,7 @@ let data1 = [
         v: {
           v: "135****0794",
           id: 65790,
+          expand:'readOnly'
         },
       },
       {
@@ -35,6 +38,7 @@ let data1 = [
         v: {
           v: 295563769317634048,
           id: 65790,
+          expand:'readOnly'
         },
       },
       {
@@ -43,6 +47,7 @@ let data1 = [
         v: {
           v: 1,
           id: 65790,
+          expand:'readOnly'
         },
       },
       {
@@ -8806,6 +8811,12 @@ let data1 = [
         },
       },
     ],
+    config:{
+      columnlen:{
+        2:150,
+        3:150
+      }
+    }
   },
 ];
 export default data1;

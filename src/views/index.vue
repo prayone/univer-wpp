@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-// import data1 from "utils/test";
+import data1 from "utils/test";
 export default {
   components: {},
   data() {
@@ -26,31 +26,22 @@ export default {
   created() {},
   mounted() {
     //配置项
-    window.$.getJSON("https://resource.xdfgk.cn/excel_json.json", (e) => {
-      this.lucky_data = e;
-      var options = {
-        title: "高考研究院",
-        container: "luckysheet", //luckysheet为容器id
-        data: this.lucky_data,
-        config: {
-          authority: {},
+    // window.$.getJSON("https://resource.xdfgk.cn/excel_json.json", (e) => {
+    var options = {
+      title: "高考研究院",
+      container: "luckysheet", //luckysheet为容器id
+      data: data1,
+      hook: {
+        cellUpdated(r, c, oldValue, newValue) {
+          console.log(r);
+          console.log(c);
+          console.log(newValue.id);
+          console.log(newValue.v);
         },
-        hook: {
-          cellEditBefore(range) {
-            console.log(range);
-            return;
-          },
-
-          // cellUpdated(r, c, oldValue, newValue) {
-          //   console.log(r);
-          //   console.log(c);
-          //   console.log(newValue.id);
-          //   console.log(newValue.v);
-          // },
-        },
-      };
-      window.luckysheet.create(options);
-    });
+      },
+    };
+    window.luckysheet.create(options);
+    // });
   },
   methods: {},
 };
