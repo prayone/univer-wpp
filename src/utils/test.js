@@ -4,14 +4,17 @@ let data1 = [
     index: "sheet_01",
     order: 0,
     status: 1,
+    defaultRowHeight: 25, //自定义行高
+    defaultColWidth: 90, //自定义列宽
     celldata: [
       {
         r: 1,
         c: 0,
         v: {
-          v: "\u5317\u4eac\u9500\u552e",
+          v: "维生素",
           id: 65790,
-          expand:'readOnly'
+          expand: "readOnly",
+          // bg: "pink",
         },
       },
       {
@@ -20,7 +23,8 @@ let data1 = [
         v: {
           v: "\u725b\u4e4b\u7ae5",
           id: 65790,
-          expand:'readOnly'
+          expand: "readOnly",
+          // bg: "pink",
         },
       },
       {
@@ -29,16 +33,19 @@ let data1 = [
         v: {
           v: "135****0794",
           id: 65790,
-          expand:'readOnly'
+          expand: "readOnly",
         },
       },
       {
         r: 1,
         c: 3,
         v: {
-          v: 295563769317634048,
+          v: "320541321542971409",
           id: 65790,
-          expand:'readOnly'
+          expand: "readOnly",
+          ct: {
+            fa: "@",
+          },
         },
       },
       {
@@ -47,7 +54,7 @@ let data1 = [
         v: {
           v: 1,
           id: 65790,
-          expand:'readOnly'
+          expand: "readOnly",
         },
       },
       {
@@ -126,8 +133,11 @@ let data1 = [
         r: 2,
         c: 3,
         v: {
-          v: 320541321542971392,
+          v: "320541321542971392",
           id: 65791,
+          ct: {
+            fa: "@",
+          },
         },
       },
       {
@@ -8811,12 +8821,12 @@ let data1 = [
         },
       },
     ],
-    config:{
-      columnlen:{
-        2:150,
-        3:150
-      }
-    }
+    config: {
+      columnlen: {
+        2: 150,
+        3: 150,
+      },
+    },
   },
 ];
 export default data1;
